@@ -15,15 +15,15 @@ public class Main
 
     // prob 2:
     System.out.println("Number of sides: ");
-    double sides = sc.nextDouble();
+    int sides = sc.nextInt();
     System.out.println("Side length: ");
     double length = sc.nextDouble();
     RegularPolygon shape = new RegularPolygon(sides, length);
     area = shape.getArea();
     System.out.println("Area with " + sides + " sides: " + area);
-    shape = shape.addSides(2); //error
     System.out.println("Incrementing the number of sides by two");
-    area = shape.getArea();
+    RegularPolygon shape2 = new RegularPolygon((sides + 2), length);
+    area = shape2.getArea();
     System.out.println("Area with " + (sides + 2) + " sides: " + area);
   }
 }
